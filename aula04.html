@@ -39,7 +39,7 @@
 
           <div class="form-row bg-warning">
             <div class="col-md-8 mb-3">
-               <label for="inputDefault">Cordeiro 1</label>
+               <label for="inputDefault">Cordeiro</label>
                <input type="text" class="form-control">
             </div>
 
@@ -73,11 +73,45 @@
 
           <div class="form-section">
             <h4><i class="faz fa-keyboard">Tipos de Inputs</i></h4>
+
             <div class="form-group">
               <label for="">Email:</label>
-              <input type="email" class="form-control" id="inputemail" placeholder="seu@email">
+              <input type="email" class="form-control" id="inputEmail" placeholder="seu@email">
             </div>
+
+            <div class="form-group">
+              <label for="">Senha:</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="sua senha">
+            </div>
+
+            <div class="form-group">
+              <label for="">Número:</label>
+              <input type="number" class="form-control" id="inputNumber" placeholder="123">
+            </div>
+            
+            <div class="form-group">
+              <label for="">Data:</label>
+              <input type="date" class="form-control" id="inputDate">
+            </div>
+            
+            <div class="form-group">
+              <label for="">Upload de Arquivo:</label>
+              <input type="file" class="form-control-file" id="inputFile">
+            </div>
+            
           </div>
+
+          <!--Select e Select-personalizado-->
+          <div class="form-group">
+            <label for="selectCustom">Selecione uma opção</label>
+            <select id="selectCustom" class="custom-select">
+              <option value="1">Opção 1</option>
+              <option value="2">Opção 2</option>
+              <option value="3">Opção 3</option>
+              <option value="4">Opção 4</option>
+            </select>
+          </div>
+
         </div>
       </form>
     </div>
