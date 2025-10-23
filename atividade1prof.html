@@ -38,7 +38,7 @@
 
     .hero {
       background: url('https://media1.tenor.com/m/3hU7aaqUpwsAAAAd/miku-hatsune-miku.gif')center/cover;
-      color: rgb(157, 53, 158);
+      color: var(--dark);
       padding: 100px 0;
       text-align: center;
     }
@@ -79,14 +79,10 @@
       object-fit: cover;
       border: 4px solid var(--secondary);
     }
-
-    .video {
-      display: flex;
-      justify-content: center;
-    }
-    video {
-      width: 25%;
-      height: 25%;
+    
+    iframe {
+      height: 450px;
+      width: 253.125px;
     }
 
     footer {
@@ -103,6 +99,19 @@
     }
     .social-icon:hover {
       color: var(--accent);
+    }
+
+    .borda {
+      border: 10px solid var(--secondary);
+      border-radius: 4px;
+      background-color: var(--secondary);
+      display: flex;
+    }
+
+    .centraliza-videos {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
   </style>
 </head>
@@ -193,9 +202,17 @@
     </div>
   </section>
 
-  <!--Hatsune Miku-->
-  <div class="video">
-    <video src="./【プロセカ音MAD】ニーゴの打ち上げ.mp4" autoplay="true"></video>
+  <!--Imagens Topzera Rapaziada-->
+  <div class="row centraliza-videos">
+    <div class="borda row justify-content-center" style="width: fit-content; height: fit-content">
+      <img src="https://media.tenor.com/9VtMmLO1M-MAAAA1/project-sekai-sekai.webp" alt="">
+    </div>
+    <div class="borda row justify-content-center" style="width: fit-content; height: fit-content">
+      <iframe src="./【プロセカ音MAD】ニーゴの打ち上げ.mp4" frameborder="0" class="rounded"></iframe>
+    </div>
+    <div class="borda row justify-content-center" style="width: fit-content; height: fit-content">
+      <img src="https://media.tenor.com/b2Afl765WosAAAA1/phpgamerz-kanade.webp" alt="">
+    </div>
   </div>
 
   <!-- Contact Section -->
