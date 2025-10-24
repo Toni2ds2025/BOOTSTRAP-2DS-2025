@@ -38,9 +38,21 @@
 
     .hero {
       background: url('https://media1.tenor.com/m/3hU7aaqUpwsAAAAd/miku-hatsune-miku.gif')center/cover;
-      color: var(--dark);
+      color: var(--light);
       padding: 100px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .texto {
+      background-color: #586475c7;
       text-align: center;
+      width: auto;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
     }
 
     .btn-custom {
@@ -136,9 +148,13 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
-      <h1 class="display-4 font-weight-bold">Bem-vindo ao Colorido.io</h1>
-      <p class="lead">Um site vibrante, moderno e cheio de recursos com Bootstrap 4.1!</p>
-      <a href="#features" class="btn btn-custom mt-3">Explorar</a>
+      <div style="align-items: center; justify-content: center; display: flex; flex-direction: column;">
+        <h1 class="display-4 font-weight-bold texto">Bem-vindo ao Colorido.io</h1>
+        <p class="lead texto">Um site vibrante, moderno e cheio de recursos com Bootstrap 4.1!</p>
+      </div>
+      <div style="align-items: center; justify-content: center; display: flex;">
+        <a href="#features" class="btn btn-custom mt-3">Explorar</a>
+      </div>
     </div>
   </section>
 
@@ -184,19 +200,29 @@
       <h2 class="text-center mb-5 text-secondary">Nossa Equipe</h2>
       <div class="row justify-content-center">
         <div class="col-md-3 text-center mb-4 team-member">
+          <img src="https://media.tenor.com/irmgxYoL-SgAAAA1/mizuki-akiyama.webp" alt="Membro 3" class="mb-3">
+          <h5>Mizuki Akiyama</h5>
+          <p class="text-muted">MV Maker</p>
+        </div>
+        <div class="col-md-3 text-center mb-4 team-member">
           <img src="https://media.tenor.com/Q5dzcIfWSwgAAAAM/project-sekai-prsk.gif" alt="Membro 1" class="mb-3">
           <h5>Asahina Mafuyu</h5>
-          <p class="text-muted">Designer</p>
+          <p class="text-muted">Lirista</p>
+        </div>
+        <div class="col-md-3 text-center mb-4 team-member">
+          <img src="https://media1.tenor.com/m/1G0mXHCZNr4AAAAd/ena-shinonome.gif" alt="Membro 3" class="mb-3">
+          <h5>Ena Shinonome</h5>
+          <p class="text-muted">Desenhista</p>
         </div>
         <div class="col-md-3 text-center mb-4 team-member">
           <img src="https://media.tenor.com/X86luqmIuQsAAAAM/kanade-yoisaki-cupcake.gif" alt="Membro 2" class="mb-3">
           <h5>Yoisaki Kanade</h5>
-          <p class="text-muted">Desenvolvedor</p>
+          <p class="text-muted">Compositora</p>
         </div>
         <div class="col-md-3 text-center mb-4 team-member">
           <img src="https://media1.tenor.com/m/-85FBf2KCukAAAAC/hatsune-miku-project-sekai.gif" alt="Membro 3" class="mb-3">
           <h5>Hatsune Miku</h5>
-          <p class="text-muted">Gerente de Projeto</p>
+          <p class="text-muted">Apoio Psicológico</p>
         </div>
       </div>
     </div>
