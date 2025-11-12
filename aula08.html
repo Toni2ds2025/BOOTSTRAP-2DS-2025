@@ -14,6 +14,35 @@
       background-color: #f8f9fa;
     }
 
+    .clientpfp {
+      width: 48px;
+      height: 48px;
+      border: 4px;
+      border-radius: 48px;
+      border: solid aqua;
+      margin: 4px;
+    }
+
+    .clientstable {
+      align-items: center;
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    table.clientstable tr td {
+      display: flex;
+      text-align: right;
+      justify-content: center;
+    }
+
+    table.clientstable tr td p{
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin: 0;
+    }
+
     /* Sidebar */
     #sidebar {
       min-width: 250px;
@@ -126,7 +155,7 @@
         <a href="#"><i class="fas fa-home mr-2"></i> Dashboard</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-users mr-2"></i> Clientes</a>
+        <a href="#clients"><i class="fas fa-users mr-2"></i> Clientes</a>
       </li>
       <li>
         <a href="#"><i class="fas fa-box mr-2"></i> Produtos</a>
@@ -172,6 +201,27 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!--Clientes-->
+  <div id="content">
+    <h2 id="clients">Clientes</h2>
+    <table class="clientstable">
+      <tr>
+        <td>
+          <img src="../img/kanade.jpg" alt="Kanade Yoisaki" class="clientpfp"><p>Kanade Yoisaki</p>
+        </td>
+        <td>
+          <img src="../img/mafuyu-asahina.jpg" alt="Mafuyu Asahina" class="clientpfp"><p>Mafuyu Asahina</p>
+        </td>
+        <td>
+          <img src="../img/shinonome ena .jpg" alt="Ena Shinonome" class="clientpfp"><p>Ena Shinonome</p>
+        </td>
+        <td>
+          <img src="../img/Mizuki akiyama.jpg" alt="Mizuki Akiyama" class="clientpfp"><p>Mizuki Akiyama</p>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <!-- Scripts -->
