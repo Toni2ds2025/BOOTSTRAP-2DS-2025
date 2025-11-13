@@ -19,28 +19,62 @@
       height: 48px;
       border: 4px;
       border-radius: 48px;
-      border: solid aqua;
+      border: solid #007bff;
       margin: 4px;
     }
 
-    .clientstable {
+    .clientslist {
       align-items: center;
       display: flex;
       width: fit-content;
       height: fit-content;
     }
 
-    table.clientstable tr td {
+    .clientslist ul li {
       display: flex;
       text-align: right;
       justify-content: center;
+      padding: 2px;
     }
 
-    table.clientstable tr td p{
+    .clientslist ul li p{
       display: flex;
       align-items: center;
       text-align: left;
       margin: 0;
+    }
+
+    .productimg {
+      max-width: 200px;
+      max-height: 200px;
+      border: 4px;
+      margin: 4px;
+      border-radius: 4px;
+      border: solid #007bff;
+    }
+    .productstable {
+      align-items: center;
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+    }
+    .productstable tr td {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+    }
+
+    .productstable tr td p {
+      display: flex;
+      align-items: center;
+      text-align: start;
+      margin: 4px;
+      height: 200px;
+      width: 200px;
+      border-radius: 4px;
+      border: solid #007bff;
+      padding: 4px;
     }
 
     /* Sidebar */
@@ -152,13 +186,13 @@
     </div>
     <ul class="list-unstyled components">
       <li class="active">
-        <a href="#"><i class="fas fa-home mr-2"></i> Dashboard</a>
+        <a href="#dashboard"><i class="fas fa-home mr-2"></i> Dashboard</a>
       </li>
       <li>
         <a href="#clients"><i class="fas fa-users mr-2"></i> Clientes</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-box mr-2"></i> Produtos</a>
+        <a href="#products"><i class="fas fa-box mr-2"></i> Produtos</a>
       </li>
       <li>
         <a href="#"><i class="fas fa-chart-line mr-2"></i> Relatórios</a>
@@ -172,7 +206,7 @@
   <!-- Conteúdo Principal -->
   <div id="content">
     <div class="container-fluid">
-      <h2>Dashboard</h2>
+      <h2 id="dashboard" class="fas fa-home"> Dashboard</h2>
       <p class="lead">Bem-vindo ao sistema de gerenciamento. Use o menu lateral para navegar.</p>
       <div class="row">
         <div class="col-md-4">
@@ -205,23 +239,96 @@
 
   <!--Clientes-->
   <div id="content">
-    <h2 id="clients">Clientes</h2>
-    <table class="clientstable">
-      <tr>
-        <td>
-          <img src="../img/kanade.jpg" alt="Kanade Yoisaki" class="clientpfp"><p>Kanade Yoisaki</p>
-        </td>
-        <td>
-          <img src="../img/mafuyu-asahina.jpg" alt="Mafuyu Asahina" class="clientpfp"><p>Mafuyu Asahina</p>
-        </td>
-        <td>
-          <img src="../img/shinonome ena .jpg" alt="Ena Shinonome" class="clientpfp"><p>Ena Shinonome</p>
-        </td>
-        <td>
-          <img src="../img/Mizuki akiyama.jpg" alt="Mizuki Akiyama" class="clientpfp"><p>Mizuki Akiyama</p>
-        </td>
-      </tr>
-    </table>
+    <div class="container-fluid">
+
+      <h2 id="clients" class="fas fa-users"> Clientes</h2>
+
+      <details>
+        <summary>Abrir lista de clientes</summary>
+
+        <list class="clientslist">
+
+          <ul>
+
+            <li>
+              <img src="../img/kanade.jpg" alt="Kanade Yoisaki" class="clientpfp"><p>Kanade Yoisaki</p>
+            </li>
+
+            <li>
+              <img src="../img/mafuyu-asahina.jpg" alt="Mafuyu Asahina" class="clientpfp"><p>Mafuyu Asahina</p>
+            </li>
+
+            <li>
+              <img src="../img/shinonome ena .jpg" alt="Ena Shinonome" class="clientpfp"><p>Ena Shinonome</p>
+            </li>
+
+            <li>
+              <img src="../img/Mizuki akiyama.jpg" alt="Mizuki Akiyama" class="clientpfp"><p>Mizuki Akiyama</p>
+            </li>
+          </ul>
+
+        </list>
+
+      </details>
+
+    </div>
+  </div>
+
+  <!--Produtos-->
+  <div id="content">
+    <div class="container-fluid">
+
+      <h2 id="products" class="fas fa-box"> Produtos</h2>
+
+      <details>
+        <summary>Abrir tabela de produtos</summary>
+
+        <table class="productstable">
+
+          <tr class="row">
+            <td class="col">
+              <img src="../img/hatsune-miku-cup-noodles-nendroid.jpeg" alt="hatsune-miku-cup-noodles-nendroid" class="productimg">
+            </td>
+            <td class="col">
+              <p>Nome:<br>Nendroid da Miku Hatsune segurando um Cup Noodles</p>
+              <p>Quantia em estoque:<br>14</p>
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="col">
+              <img src="../img/megurine-luka-nendoroid.jpeg" alt="megurine-luka-nendoroid" class="productimg">
+            </td>
+            <td class="col">
+              <p>Nome:<br>Nendroid da Luka Megurine segurando um salmão</p>
+              <p>Quantia em estoque:<br> 65</p>
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="col">
+              <img src="../img/meiko-nendoroid.jpeg" alt="meiko-nendoroid" class="productimg">
+            </td>
+            <td class="col">
+              <p>Nome:<br>MEIKO ( nada de estranho vindo dela )</p>
+              <p>Quantia em estoque:<br>54</p>
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="col">
+              <img src="../img/miku-nendroid.jpeg" alt="miku-nendroid" class="productimg">
+            </td>
+            <td class="col">
+              <p>Nome:<br> Miku Hatsune ( versão depressiva )</p>
+              <p>Quantia em estoque:<br>0</p>
+            </td>
+          </tr>
+
+        </table>
+
+      </details>
+    </div>
   </div>
 
   <!-- Scripts -->
