@@ -14,6 +14,8 @@
       background-color: #f8f9fa;
     }
 
+    /*Clientes*/
+
     .clientpfp {
       width: 48px;
       height: 48px;
@@ -44,6 +46,8 @@
       margin: 0;
     }
 
+    /*Produtos*/
+
     .productimg {
       max-width: 200px;
       max-height: 200px;
@@ -52,12 +56,14 @@
       border-radius: 4px;
       border: solid #007bff;
     }
+
     .productstable {
       align-items: center;
       display: flex;
       width: fit-content;
       height: fit-content;
     }
+
     .productstable tr td {
       display: flex;
       justify-content: center;
@@ -75,6 +81,35 @@
       border-radius: 4px;
       border: solid #007bff;
       padding: 4px;
+    }
+
+    /*Relatórios*/
+
+    .salesreporttable tr{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 4px;
+      border-radius: 4px;
+      border: solid #007bff;
+    }
+
+    .salesreporttable tr td {
+      padding: 0px;
+      margin: 4px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .salesreporttable tr td p{
+      padding: 0;
+      margin: 4px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      text-align: center;
     }
 
     /* Sidebar */
@@ -195,7 +230,7 @@
         <a href="#products"><i class="fas fa-box mr-2"></i> Produtos</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-chart-line mr-2"></i> Relatórios</a>
+        <a href="#salesreport"><i class="fas fa-chart-line mr-2"></i> Relatórios</a>
       </li>
       <li>
         <a href="#"><i class="fas fa-cog mr-2"></i> Configurações</a>
@@ -250,19 +285,19 @@
 
           <ul>
 
-            <li>
+            <li type="client" name="Kanade Yoisaki">
               <img src="../img/kanade.jpg" alt="Kanade Yoisaki" class="clientpfp"><p>Kanade Yoisaki</p>
             </li>
 
-            <li>
+            <li type="client" name="Mafuyu Asahina">
               <img src="../img/mafuyu-asahina.jpg" alt="Mafuyu Asahina" class="clientpfp"><p>Mafuyu Asahina</p>
             </li>
 
-            <li>
+            <li type="client" name="Ena Shinonome">
               <img src="../img/shinonome ena .jpg" alt="Ena Shinonome" class="clientpfp"><p>Ena Shinonome</p>
             </li>
 
-            <li>
+            <li type="client" name="Mizuki Akiyama">
               <img src="../img/Mizuki akiyama.jpg" alt="Mizuki Akiyama" class="clientpfp"><p>Mizuki Akiyama</p>
             </li>
           </ul>
@@ -285,42 +320,50 @@
 
         <table class="productstable">
 
-          <tr class="row">
+          <tr type="product" name="hatsune-miku-cup-noodles-nendroid" class="row">
             <td class="col">
               <img src="../img/hatsune-miku-cup-noodles-nendroid.jpeg" alt="hatsune-miku-cup-noodles-nendroid" class="productimg">
             </td>
             <td class="col">
-              <p>Nome:<br>Nendroid da Miku Hatsune segurando um Cup Noodles</p>
+              <p>Nome:<br>Nendroid da Miku Hatsune ( depressiva ) segurando um Cup Noodles</p>
+            </td>
+            <td class="col">
               <p>Quantia em estoque:<br>14</p>
             </td>
           </tr>
 
-          <tr class="row">
+          <tr type="product" name="megurine-luka-nendoroid" class="row">
             <td class="col">
               <img src="../img/megurine-luka-nendoroid.jpeg" alt="megurine-luka-nendoroid" class="productimg">
             </td>
             <td class="col">
               <p>Nome:<br>Nendroid da Luka Megurine segurando um salmão</p>
-              <p>Quantia em estoque:<br> 65</p>
+            </td>
+            <td class="col">
+              <p>Quantia em estoque:<br>65</p>
             </td>
           </tr>
 
-          <tr class="row">
+          <tr type="product" name="meiko-nendoroid" class="row">
             <td class="col">
               <img src="../img/meiko-nendoroid.jpeg" alt="meiko-nendoroid" class="productimg">
             </td>
             <td class="col">
               <p>Nome:<br>MEIKO ( nada de estranho vindo dela )</p>
+            </td>
+            <td class="col">
               <p>Quantia em estoque:<br>54</p>
             </td>
           </tr>
 
-          <tr class="row">
+          <tr type="product" name="miku-nendroid" class="row">
             <td class="col">
               <img src="../img/miku-nendroid.jpeg" alt="miku-nendroid" class="productimg">
             </td>
             <td class="col">
               <p>Nome:<br> Miku Hatsune ( versão depressiva )</p>
+            </td>
+            <td class="col">
               <p>Quantia em estoque:<br>0</p>
             </td>
           </tr>
@@ -331,6 +374,118 @@
     </div>
   </div>
 
+  <!--Relatórios-->
+  <div id="content">
+    <div class="container-fluid">
+
+      <h2 id="#salesreport" class="fas fa-chart-line"> Relatórios</h2>
+
+      <details>
+        <summary>Abrir relatóio de vendas</summary>
+
+        <table class="salesreporttable">
+
+          <tr class="row">
+
+            <td type="date" class="col">
+              <p>Data: 23/10/2022</p>
+            </td>
+
+            <td type="client" class="col">
+              <p>Cliente: Kanade Yoisaki</p>
+            </td>
+
+            <td type="product" class="col">
+              <p>Produto: hatsune-miku-cup-noodles-nendroid</p>
+            </td>
+
+          </tr>
+
+          <tr class="row">
+
+            <td type="date" class="col">
+              <p>Data: 13/06/2022</p>
+            </td>
+
+            <td type="client" class="col">
+              <p>Cliente: Ena Shinonome</p>
+            </td>
+
+            <td type="product" class="col">
+              <p>Produto: meiko-nendoroid</p>
+            </td>
+
+          </tr>
+
+          <tr class="row">
+
+            <td type="date" class="col">
+              <p>Data: 31/03/2022</p>
+            </td>
+
+            <td type="client" class="col">
+              <p>Cliente: Mizuki Akiyama</p>
+            </td>
+
+            <td type="product" class="col">
+              <p>Produto: megurine-luka-nendoroid</p>
+            </td>
+
+          </tr>
+
+          <tr class="row">
+
+            <td type="date" class="col">
+              <p>Data: 18/12/2021</p>
+            </td>
+
+            <td type="client" class="col">
+              <p>Cliente: Mafuyu Asahina</p>
+            </td>
+
+            <td type="product" class="col">
+              <p>Produto: miku-nendroid</p>
+            </td>
+
+          </tr>
+
+          <tr class="row">
+
+            <td type="date" class="col">
+              <p>Data: 16/10/2021</p>
+            </td>
+
+            <td type="client" class="col">
+              <p>Cliente: Ena Shinonome</p>
+            </td>
+
+            <td type="product" class="col">
+              <p>Produto: megurine-luka-nendoroid</p>
+            </td>
+
+          </tr>
+          
+          <tr class="row">
+
+            <td type="date" class="col">
+              <p>Data: 25/06/2020</p>
+            </td>
+
+            <td type="client" class="col">
+              <p>Cliente: Kanade Yoisaki</p>
+            </td>
+
+            <td type="product" class="col">
+              <p>Produto: hatsune-miku-cup-noodles-nendroid</p>
+            </td>
+
+          </tr>
+
+        </table>
+      </details>
+
+    </div>
+  </div>
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
